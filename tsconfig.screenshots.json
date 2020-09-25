@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.spec.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc/screenshots",
+    "paths": {
+      "@otus/components/*": [ "packages/components/dist/*" ],
+      "@otus/*": [ "packages/*/dist" ]
+    }
+  }
+}

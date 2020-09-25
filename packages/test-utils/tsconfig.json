@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.lib.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "types": ["jest", "node"],
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,
+		"noImplicitReturns": true,
+		"strictNullChecks": true,
+		"allowUnreachableCode": false,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc/build",
+    "strictPropertyInitialization": false,
+		"noImplicitReturns": true,
+		"noImplicitAny": false,
+		"strictNullChecks": false,
+		"allowUnreachableCode": false,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
+}

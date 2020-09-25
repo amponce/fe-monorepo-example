@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "component": {
+      "description": "An @otus/frontend presentational component",
+      "factory": "./component",
+      "schema": "./component/schema.json"
+    }
+  }
+}

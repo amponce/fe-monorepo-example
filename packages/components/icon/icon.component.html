@@ -1,0 +1,9 @@
+<fa-icon
+  class="ot-icon"
+  *ngIf="iconDef"
+  [icon]="iconDef | async"
+  aria-hidden="true"
+  [spin]="shouldSpin"
+  [fixedWidth]="width == 'fixed'"
+  [styles]="{display:display}"
+></fa-icon>

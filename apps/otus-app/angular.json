@@ -1,0 +1,87 @@
+{
+  "$schema": "../../node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "projects": {
+    "otus-app": {
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "ot",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "tsConfig": "tsconfig.build.json",
+            "polyfills": "src/polyfills.ts",
+            "optimization": true,
+            "outputHashing": "all",
+            "sourceMap": false,
+            "extractCss": true,
+            "namedChunks": true,
+            "extractLicenses": true,
+            "vendorChunk": true,
+            "buildOptimizer": true,
+            "aot": true,
+            "preserveSymlinks": true,
+            "assets": [
+              "src/assets",
+              "src/favicon.ico"
+            ],
+            "styles": [],
+            "scripts": []
+          },
+          "configurations": {
+            "local": {
+              "tsConfig": "tsconfig.json",
+              "assets": [
+                "src/assets"
+              ],
+              "verbose": true,
+              "progress": true,
+              "optimization": false,
+              "buildOptimizer": false,
+              "outputHashing": "none",
+              "sourceMap": {
+                "hidden": false,
+                "scripts": true,
+                "styles": false,
+                "vendor": false
+              }
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "otus-app:build:local",
+            "port": 4200,
+            "disableHostCheck": true,
+            "hmr": true,
+            "hmrWarning": false
+          },
+          "configurations": {
+            "local": {
+              "browserTarget": "otus-app:build:local"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "configPath": "../../jest.config.js",
+            "tsConfig": "./tsconfig.spec.json",
+            "no-cache": true,
+            "runInBand": true
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "otus-app",
+  "cli": {
+    "analytics": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "packages",
+  "projects": {
+    "root": {
+      "projectType": "library",
+      "root": "",
+      "sourceRoot": "",
+      "prefix": "my",
+      "architect": {
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "no-cache": true
+          },
+          "configurations": {
+            "screenshots": {
+              "configPath": "jest.config.screenshots.js",
+              "tsConfig": "tsconfig.screenshots.json"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "root"
+}

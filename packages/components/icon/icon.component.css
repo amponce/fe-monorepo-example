@@ -1,0 +1,51 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+  vertical-align: middle;
+}
+
+:host fa-icon {
+  line-height: var(--ot-line-height-none);
+}
+
+:host[color='inverse'] {
+  color: var(--ot-color-background);
+}
+
+:host[color='inherit'] {
+  color: inherit;
+}
+
+:host[color='neutral'] {
+  color: var(--ot-color-neutral-700);
+}
+
+:host[color='primary'] {
+  color: var(--ot-color-primary-700);
+}
+
+:host[color='secondary'] {
+  color: var(--ot-color-secondary-700);
+}
+
+:host[color='negative'] {
+  color: var(--ot-color-negative-700);
+}
+
+:host[color='notice'] {
+  color: var(--ot-color-notice-700);
+}
+
+:host[color='positive'] {
+  color: var(--ot-color-positive-700);
+}
+
+:host[color='info'] {
+  color: var(--ot-color-info-700);
+}

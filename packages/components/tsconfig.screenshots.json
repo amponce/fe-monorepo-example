@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.screenshots.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc/screenshots",
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
+		"noImplicitReturns": true,
+		"allowUnreachableCode": false,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}

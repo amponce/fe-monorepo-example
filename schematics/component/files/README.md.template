@@ -1,0 +1,13 @@
+# @otus/components/<%= dasherize(name) %>
+
+## Installation
+
+```bash
+npm install --save @otus/components
+```
+
+## Usage
+
+```html
+<<%= selector %>></<%= selector %>>
+```

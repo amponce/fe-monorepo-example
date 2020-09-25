@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.spec.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc/spec",
+    "strictPropertyInitialization": true,
+		"noImplicitReturns": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"allowUnreachableCode": false,
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}

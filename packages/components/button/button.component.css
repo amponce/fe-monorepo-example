@@ -1,0 +1,17 @@
+:host {
+  all: unset;
+  background-color: var(--ot-color-primary-800);
+  color: var(--ot-color-background);
+  padding: 1rem;
+  font-family: var(--ot-font-family-base, sans-serif);
+  border: var(--ot-border-l) transparent;
+  border-radius: var(--ot-border-radius-m);
+}
+
+:host:focus {
+  border-color: var(--ot-color-secondary-400);
+}
+
+:host:active {
+  background-color: var(--ot-color-primary-900);
+}

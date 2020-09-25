@@ -1,0 +1,5 @@
+/*
+ * Public API Surface of @otus/components/<%= dasherize(name) %>
+ */
+export * from './<%= dasherize(name) %>.component';
+export * from './<%= dasherize(name) %>.module';

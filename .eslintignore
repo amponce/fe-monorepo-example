@@ -1,0 +1,11 @@
+**/dist/**
+**/assets/**
+**/tmp/**
+**/out-tsc/**
+**/node_modules/
+**/coverage/**
+**/assets/**
+**/ssl/**
+**/nginx_conf/**
+**/typings/**
+**/schematics/**

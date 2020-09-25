@@ -1,0 +1,47 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "baseUrl": "./",
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "preserveSymlinks": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "emitDecoratorMetadata": true,
+		"inlineSourceMap": true,
+		"inlineSources": true,
+    "pretty": true,
+    "paths": {
+      "@otus/components/*": [ "packages/components/*/index.ts" ],
+      "@otus/*": [ "packages/*" ]
+    },
+    "strictPropertyInitialization": false,
+		"noImplicitReturns": false,
+		"noImplicitAny": false,
+		"allowUnreachableCode": false,
+		"noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "strictNullChecks": false,
+    "noFallthroughCasesInSwitch": true,
+    "allowUmdGlobalAccess": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "typings"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

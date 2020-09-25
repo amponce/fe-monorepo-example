@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc/spec",
+    "module": "commonjs",
+    "types": ["jest", "node"],
+    "allowJs": true
+  },
+  "exclude": [
+    "__coverage__",
+    "__screenshots__"
+  ],
+  "include": [
+    "**/*.spec.ts",
+    "**.*.d.ts"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc/build",
+    "paths": {
+      "@otus/components/*": [ "packages/components/dist/*" ],
+      "@otus/*": [ "packages/*/dist" ]
+    }
+  }
+}

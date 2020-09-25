@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-prettier/recommended"
+  ],
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+    "prettier/prettier": true,
+    "selector-type-no-unknown": [true, { "ignore": "custom-elements" }],
+    "selector-pseudo-element-no-unknown": [true, { "ignorePseudoElements": ["ng-deep"] }],
+    "unit-disallowed-list": ["px"],
+    "color-no-hex": true,
+    "color-named": "never",
+    "declaration-property-value-disallowed-list": {
+      "/^font/": ["/Lato/"]
+    },
+    "declaration-property-value-allowed-list": {
+      "font-family": ["/^var/", "inherit"],
+      "color": ["/^var/", "inherit"],
+      "font-weight": ["/^var/", "inherit"],
+      "font-size": ["/^var/", "inherit"],
+      "background-color": ["/^var/", "inherit"],
+      "line-height": ["/^var/", "inherit"],
+      "letter-spacing": ["/^var/", "inherit"],
+      "border": ["/^var/", "inherit"],
+      "border-radius": ["/^var/", "inherit"],
+      "box-shadow": ["/^var/", "inherit"],
+      "z-index": ["/^var/", "inherit"]
+    },
+    "property-disallowed-list": [
+      "padding-left",
+      "padding-right",
+      "margin-left",
+      "margin-right"
+    ],
+    "declaration-no-important": true,
+    "selector-class-pattern": "^ot-(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$"
+  },
+  "ignoreFiles": [
+    "**/coverage/**",
+    "**/assets/**",
+    "**/dist/**",
+    "**/tmp/**",
+    "**/out-tsc/**",
+    "**/node_modules/**",
+    "apps/my.otus.com/src/lessons-2.0/student-activity-modal/student-activity-modal.component.css"
+  ]
+}

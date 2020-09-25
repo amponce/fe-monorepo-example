@@ -1,0 +1,63 @@
+{
+  "name": "@otus/test-utils",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "scripts": {
+    "ng": "ng",
+    "build": "ng build",
+    "build.watch": "ng build --watch",
+    "clean": "rimraf dist node_modules"
+  },
+  "devDependencies": {
+    "@otus/theme": "^0.1.0",
+    "@types/connect": "^3.4.33",
+    "@types/finalhandler": "^1.1.0",
+    "@types/fs-extra": "^9.0.1",
+    "@types/puppeteer": "^3.0.2"
+  },
+  "peerDependencies": {
+    "@angular/core": "^10",
+    "@otus/theme": "^0",
+    "jest": "^26",
+    "jest-axe": "^4"
+  },
+  "dependencies": {
+    "@percy/puppeteer": "^1.1.0",
+    "@testing-library/angular": "^10.0.2",
+    "@testing-library/user-event": "^12.1.4",
+    "connect": "^3.7.0",
+    "dotenv": "^8.2.0",
+    "finalhandler": "^1.1.2",
+    "fs-extra": "^9.0.1",
+    "pretty-format": "^26.4.2",
+    "puppeteer": "^5.2.1"
+  },
+  "publishConfig": {
+    "directory": "dist",
+    "access": "public"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "sideEffects": false,
+  "ngPackage": {
+    "dest": "dist",
+    "whitelistedNonPeerDependencies": [
+      "@percy/puppeteer",
+      "@testing-library/angular",
+      "@testing-library/user-event",
+      "connect",
+      "dotenv",
+      "finalhandler",
+      "fs-extra",
+      "pretty-format",
+      "puppeteer"
+    ],
+    "lib": {
+      "entryFile": "src/index.ts"
+    }
+  }
+}

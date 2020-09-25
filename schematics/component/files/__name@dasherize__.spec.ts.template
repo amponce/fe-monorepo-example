@@ -1,0 +1,23 @@
+import { axe, render, screenshot } from '@otus/test-utils';
+
+import { <%= classify(name) %>Module, <%= classify(name) %> } from '@otus/components/<%= dasherize(name) %>';
+
+describe('<%= classify(name) %>', () => {
+  it(`should render the projected content`, async () => {
+    const project = 'I am an example';
+    const { findByText } = await render(<%= classify(name) %>, {
+      template: `<<%= selector %>>${project}</<%= selector %>>`,
+      imports: [<%= classify(name) %>Module],
+    });
+    const content = await findByText(project);
+    expect(content).toBeInTheDocument();
+    await screenshot();
+  });
+  it(`should be accessible`, async () => {
+    const { container } = await render(<%= classify(name) %>, {
+      template: `<<%= selector %>>hello</<%= selector %>>`,
+      imports: [<%= classify(name) %>Module],
+    });
+    expect(await axe(container)).toHaveNoViolations();
+  });
+});
