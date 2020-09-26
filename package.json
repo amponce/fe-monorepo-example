@@ -10,7 +10,7 @@
     "test.coverage": "ng test --coverage",
     "test.watch": "ng test --watch",
     "test.screenshots": "ENABLE_SCREENSHOTS=1 percy exec -- ng test --configuration=screenshots",
-    "clean": "rm -rf dist && lerna run clean && lerna clean",
+    "clean": "rimraf dist && lerna run clean && lerna clean",
     "generate.component": "schematics .:component --dry-run=false && lerna bootstrap",
     "lint.es": "eslint '**/*.{js,ts}' --ext .js,.ts --quiet",
     "lint.css": "stylelint '**/*.css' --allow-empty-input",
@@ -50,14 +50,17 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "htmlhint": "^0.14.1",
+    "husky": "^4.3.0",
     "jest": "^26.4.2",
     "jest-axe": "^4.0.0",
     "jest-preset-angular": "^8.3.1",
     "lerna": "^3.22.1",
+    "lint-staged": "^10.4.0",
     "lodash": "^4.17.15",
     "lodash-es": "^4.17.15",
     "ng-packagr": "^10.1.0",
     "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
     "stylelint": "^13.7.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
@@ -77,5 +80,21 @@
   "publishConfig": {
     "directory": "dist",
     "access": "public"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,js,json}": [
+      "eslint --fix --quiet"
+    ],
+    "**/*.css": [
+      "stylelint --fix --allow-empty-input"
+    ],
+    "**/*.html": [
+      "htmlhint --ignore '**/vendor/**'"
+    ]
   }
 }
