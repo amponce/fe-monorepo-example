@@ -54,21 +54,11 @@ To start the core application locally run:
 
 Note that the package name that you use for the `scope` option above should be what is in the `name` field in the `package.json` file for that package (for example, `packages/my-service/package.json` is `@otus/my-service`).
 
-When adding a third party dependency to a library (vs. an application), you will need to add the dependency to the `whitelistedNonPeerDependencies` list in the `package.json` file for the library. If you don't want it to be a peer dependency.
-
-```json
-  "ngPackage": {
-    "whitelistedNonPeerDependencies": [
-      "@someScope/some-dependency"
-    ]
-  }
-```
-
 ## Linting
 
 The @otus/fe-monorepo-example project uses a combination of [eslint](https://www.eslint.org), [htmlhint](https://htmlhint.com/), and [stylelint](https://stylelint.io/) for linting source code.
 
-Linters are run and configured in the @otus/monorepo root (source-code/) so that they can be run and tied into git commit hooks (using [husky](https://github.com/typicode/husky)).
+Linters are run and configured in the monorepo root so that they can be run and tied into git commit hooks (using [husky](https://github.com/typicode/husky)).
 
 ### Automatic Set Up With VScode
 
